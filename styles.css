@@ -1,0 +1,42 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+  margin: 0;
+}
+
+.letter-container {
+  position: relative;
+}
+
+.letter {
+  font-size: 25em;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 5px transparent;
+  background: linear-gradient(
+    45deg,
+    #ff007f,
+    #7f00ff,
+    #007fff,
+    #00ff7f,
+    #ff007f
+  );
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  animation: color-change 5s infinite;
+}
+
+@keyframes color-change {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
